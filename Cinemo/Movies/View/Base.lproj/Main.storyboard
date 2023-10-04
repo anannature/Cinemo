@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bnT-ui-yTQ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MoviesViewController" customModule="Cinemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9xI-C2-7un">
+                                <rect key="frame" x="0.0" y="144" width="393" height="605"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLF-57-9m3">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cinemo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9B-GJ-RYM">
+                                        <rect key="frame" x="166.66666666666666" y="69.333333333333343" width="60" height="21.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-CJ-uEL">
+                                        <rect key="frame" x="343" y="63.333333333333343" width="50" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="paperplane.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="favoriteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y42-Sw-mlH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wTi-CJ-uEL" secondAttribute="bottom" constant="2.3300000000000001" id="3OV-G3-Gku"/>
+                                    <constraint firstAttribute="bottom" secondItem="K9B-GJ-RYM" secondAttribute="bottom" constant="9.3300000000000001" id="9KM-1E-R6Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="wTi-CJ-uEL" secondAttribute="trailing" id="tua-6S-x4E"/>
+                                    <constraint firstAttribute="height" constant="100" id="uUg-kV-C6E"/>
+                                    <constraint firstItem="K9B-GJ-RYM" firstAttribute="centerX" secondItem="cLF-57-9m3" secondAttribute="centerX" id="wPV-kg-0AU"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Finder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pm-vD-lcU">
+                                <rect key="frame" x="6" y="110" width="381" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9xI-C2-7un" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8tG-Vg-N5g"/>
+                            <constraint firstItem="9xI-C2-7un" firstAttribute="top" secondItem="4pm-vD-lcU" secondAttribute="bottom" id="Baz-nj-UTg"/>
+                            <constraint firstItem="cLF-57-9m3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kqh-xa-tmu"/>
+                            <constraint firstItem="4pm-vD-lcU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="X4h-22-SsO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9xI-C2-7un" secondAttribute="trailing" id="cYX-uq-vaT"/>
+                            <constraint firstItem="cLF-57-9m3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jUn-v9-ivA"/>
+                            <constraint firstItem="cLF-57-9m3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ohQ-2d-6UY"/>
+                            <constraint firstItem="cLF-57-9m3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pLu-BA-2xV"/>
+                            <constraint firstAttribute="bottom" secondItem="9xI-C2-7un" secondAttribute="bottom" id="u6E-pc-s9a"/>
+                            <constraint firstItem="4pm-vD-lcU" firstAttribute="top" secondItem="cLF-57-9m3" secondAttribute="bottom" constant="10" id="xAo-7J-6kj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4pm-vD-lcU" secondAttribute="trailing" constant="6" id="zN3-rJ-keV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wlD-O5-SUl"/>
+                    <connections>
+                        <outlet property="favoriteButton" destination="wTi-CJ-uEL" id="xh2-NS-e0x"/>
+                        <outlet property="movieFinder" destination="4pm-vD-lcU" id="Td5-Vm-7qf"/>
+                        <outlet property="tableView" destination="9xI-C2-7un" id="cbu-wp-cjo"/>
+                        <outlet property="topBarView" destination="cLF-57-9m3" id="wwq-pd-P10"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608.3969465648854" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2mp-vq-gWs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bnT-ui-yTQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="od8-vC-Hnd">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yzi-rE-h8M">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZFv-jg-gIn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwr-7G-NsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681.67938931297704" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
